@@ -35,11 +35,11 @@ function App() {
 
   return (
     <div className="App">
-      {message}
       <Router>
         <Routes>
           <Route path='/' element={
             <Fragment>
+              {message}
               <SearchContext.Provider value={{
                 term: searchInput,
                 handleSearch: handleSearch
@@ -52,7 +52,7 @@ function App() {
             </Fragment>
           }/>
           <Route path='/album/:id' element={<AlbumView />} />
-          <Route path='artist/:id' element={<ArtistView />} />
+          <Route path='/artist/:id' element={<ArtistView />} />
 
         </Routes>
       </Router>
